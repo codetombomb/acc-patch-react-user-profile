@@ -1,6 +1,8 @@
 function InfoContainer() {
   return (
-    <div>InfoContainer</div>
+    <div className="info-container">
+      
+    </div>
   )
 }
 export default InfoContainer
