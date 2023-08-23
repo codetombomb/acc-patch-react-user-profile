@@ -31,7 +31,11 @@ function App() {
       <section className="main-content">
         <div className="my-account-wrapper">
           <h1>My Account</h1>
-          <MyAccount bannerColor={user.bannerColor} avatar={user.avatar}/>
+          <MyAccount
+            bannerColor={user.bannerColor}
+            avatar={user.avatar}
+            displayName={user.displayName}
+          />
         </div>
         <EscButton />
       </section>
