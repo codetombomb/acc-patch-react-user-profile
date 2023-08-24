@@ -19,15 +19,21 @@ function App() {
     bannerColor: "",
   });
 
+  const [selectedOption, setSelectedOption] = useState("My Account")
+
   useEffect(() => {
     fetch("http://localhost:3001/users/1")
       .then((resp) => resp.json())
       .then((data) => setUser({ ...data }));
   }, []);
 
+  function handleSidebarSelection(option){
+    setSelectedOption(option)
+  }
+
   return (
     <div className="App">
-      <Sidebar userOptions={userOptions} />
+      <Sidebar userOptions={userOptions} selectedOption={selectedOption} onSidebarSelection={handleSidebarSelection} />
       <section className="main-content">
         <div className="my-account-wrapper">
           <h1>My Account</h1>

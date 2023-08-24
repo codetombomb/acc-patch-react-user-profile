@@ -33,12 +33,12 @@
   font-weight: 500;
   padding: 3%;
   border-radius: 5px;
-}
-
-.side-bar-option:hover {
-  background-color: #3f4248;
   margin-right: 5%;
 }
+
+/* .side-bar-option:hover {
+  background-color: #3f4248;
+} */
 
 .main-content {
   padding-top: 5%;
@@ -52,7 +52,7 @@
   border-radius: 10px;
   margin-top: 5%;
   width: 100%;
-  height: 500px;;
+  height: 500px;
   min-height: 100px;
   background-color: #1e1f22;
   position: relative;
@@ -151,7 +151,7 @@
   flex-direction: column;
 }
 
-.info-row{
+.info-row {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
@@ -159,13 +159,5 @@
 }
 
 .info-row-name {
-  color: #B5BAC0;
+  color: #b5bac0;
 }
-/* 
-main-color: #303338 
-banner-color: #fbeb31 (rossi yellow)
-button-color: #5766F2
-main-side-panel: #2A2D31
-text-color: #EEEFF1
-input-color: #1E1F22
-*/
