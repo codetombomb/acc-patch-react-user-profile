@@ -35,6 +35,9 @@ function App() {
             bannerColor={user.bannerColor}
             avatar={user.avatar}
             displayName={user.displayName}
+            username={user.username}
+            email={user.email}
+            phoneNumber={user.phoneNumber}
           />
         </div>
         <EscButton />

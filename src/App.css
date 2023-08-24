@@ -135,7 +135,10 @@
   cursor: pointer;
   display: grid;
   place-content: center;
-  padding: 10px;
+  padding: 10px 15px;
+  width: fit-content;
+  height: 10px;
+  font-weight: 600;
 }
 
 .info-container {
@@ -144,8 +147,20 @@
   height: 60%;
   width: 90%;
   margin: 5% 5% 5% 5%;
+  display: flex;
+  flex-direction: column;
 }
 
+.info-row{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 2.5% 5% 0 5%;
+}
+
+.info-row-name {
+  color: #B5BAC0;
+}
 /* 
 main-color: #303338 
 banner-color: #fbeb31 (rossi yellow)
