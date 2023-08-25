@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import EscButton from "./components/EscButton";
-import MyAccount from "./components/MyAccount";
-import Sidebar from "./components/Sidebar";
+import MyAccount from "./components/MyAccountCard/MyAccount";
+import Sidebar from "./components/Sidebar/Sidebar";
+import EditProfile from "./components/EditProfile/EditProfile";
 
 function App() {
-  const [userOptions, setUserOptions] = useState([
+  const [userOptions] = useState([
     "My Account",
     "Edit Profile",
   ]);
@@ -19,7 +20,7 @@ function App() {
     bannerColor: "",
   });
 
-  const [selectedOption, setSelectedOption] = useState("My Account")
+  const [selectedOption, setSelectedOption] = useState("My Account");
 
   useEffect(() => {
     fetch("http://localhost:3001/users/1")
@@ -27,24 +28,34 @@ function App() {
       .then((data) => setUser({ ...data }));
   }, []);
 
-  function handleSidebarSelection(option){
-    setSelectedOption(option)
+  function handleSidebarSelection(option) {
+    setSelectedOption(option);
+  }
+
+  function handleUpdateUser(updatedUser) {
+    setUser({ ...updatedUser });
+    setSelectedOption("My Account")
+  }
+
+  function onEditClick(){
+    setSelectedOption("Edit Profile")
   }
 
   return (
     <div className="App">
-      <Sidebar userOptions={userOptions} selectedOption={selectedOption} onSidebarSelection={handleSidebarSelection} />
+      <Sidebar
+        userOptions={userOptions}
+        selectedOption={selectedOption}
+        onSidebarSelection={handleSidebarSelection}
+      />
       <section className="main-content">
         <div className="my-account-wrapper">
           <h1>My Account</h1>
-          <MyAccount
-            bannerColor={user.bannerColor}
-            avatar={user.avatar}
-            displayName={user.displayName}
-            username={user.username}
-            email={user.email}
-            phoneNumber={user.phoneNumber}
-          />
+          {selectedOption === "My Account" ? (
+            <MyAccount user={user} handleEditClick={onEditClick}/>
+          ) : (
+            <EditProfile user={user} handleUpdateUser={handleUpdateUser} />
+          )}
         </div>
         <EscButton />
       </section>

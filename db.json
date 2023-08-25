@@ -2,14 +2,14 @@
   "users": [
     {
       "id": 1,
-      "avatar": "https://pbs.twimg.com/profile_images/1694096178806173697/Ryhg8WCg_400x400.jpg",
-      "displayName": "Tom Tobar",
       "username": "codetombomb",
-      "email": "tomas.tobar@flatironschool.com",
-      "phoneNumber": "512-512-5125",
       "firstName": "Tom",
       "lastName": "Tobar",
-      "bannerColor": "#fbeb31"
+      "displayName": "Tom Tobar",
+      "email": "tomas.tobar@flatironschool.com",
+      "avatar": "https://pbs.twimg.com/profile_images/1694096178806173697/Ryhg8WCg_400x400.jpg",
+      "phoneNumber": "512-487-2569",
+      "bannerColor": "#bbff00"
     }
   ]
 }

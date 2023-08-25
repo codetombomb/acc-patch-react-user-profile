@@ -1,4 +1,4 @@
-function Button({size, innerText}) {
+function Button({size, innerText, clickHandler}) {
 
   function buttonStyles(){
     const bigButton = {
@@ -9,13 +9,13 @@ function Button({size, innerText}) {
     }
     if (size === "large"){
       return bigButton
-    } else if (size == "small"){
+    } else if (size === "small"){
       return smallButton
     }
   }
 
   return (
-    <div className="btn" style={buttonStyles()}>{innerText}</div>
+    <div className="btn" style={buttonStyles()} onClick={clickHandler}>{innerText}</div>
   )
 }
 export default Button

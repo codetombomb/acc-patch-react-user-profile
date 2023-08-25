@@ -161,3 +161,45 @@
 .info-row-name {
   color: #b5bac0;
 }
+
+.edit-profile {
+  display: flex;
+  flex-direction: column;
+  max-height: 1000px;
+}
+
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.edit-profile-form, label {
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  color: #b5bac0;
+  font-weight: 600;
+}
+input {
+  background-color: #1E1F22;
+  border-radius: 5px;
+  height: 10%;
+  border: none;
+  outline: none;
+  color: #DBDEE1;
+  padding: 2%;
+  margin-top: 2%;
+}
+
+hr {
+  border: 1px solid #3E4147;
+  margin: 1% 0 1% 0;
+}
+
+.color-picker{
+  height: 100px;
+  width: 150px;
+  border: none;
+  outline: none;
+}
