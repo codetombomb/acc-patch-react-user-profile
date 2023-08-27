@@ -5,10 +5,11 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import EditProfile from "./components/EditProfile/EditProfile";
 
 const App = () => {
-  const [userOptions] = useState([
+  const userOptions = [
     "My Account",
     "Edit Profile",
-  ]);
+  ];
+
   const [user, setUser] = useState({
     username: "",
     firstName: "",
@@ -27,11 +28,11 @@ const App = () => {
       .then((data) => setUser({ ...data }));
   }, []);
 
-  const handleSidebarSelection = (option) => {
+  const onHandleSidebarSelection = (option) => {
     setSelectedOption(option);
   }
 
-  const handleUpdateUser = (updatedUser) => {
+  const onHandleUpdateUser = (updatedUser) => {
     setUser({ ...updatedUser });
     setSelectedOption("My Account")
   }
@@ -45,7 +46,7 @@ const App = () => {
       <Sidebar
         userOptions={userOptions}
         selectedOption={selectedOption}
-        onSidebarSelection={handleSidebarSelection}
+        onSidebarSelection={onHandleSidebarSelection}
       />
       <section className="main-content">
         <div className="my-account-wrapper">
@@ -53,7 +54,7 @@ const App = () => {
           {selectedOption === "My Account" ? (
             <MyAccount user={user} handleEditClick={onEditClick}/>
           ) : (
-            <EditProfile user={user} handleUpdateUser={handleUpdateUser} />
+            <EditProfile user={user} handleUpdateUser={onHandleUpdateUser} />
           )}
         </div>
         <EscButton />
