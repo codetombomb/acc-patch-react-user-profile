@@ -1,4 +1,4 @@
-function EscButton() {
+const EscButton = () => {
   return (
     <div className="esc-btn-wrapper">
       <div className="esc-btn">X</div>

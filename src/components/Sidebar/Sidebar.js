@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 
-function Sidebar({ userOptions, onSidebarSelection, selectedOption }) {
+const Sidebar = ({ userOptions, onSidebarSelection, selectedOption }) => {
   
-  function handleSetSelected({ target }) {
+  const handleSetSelected = ({ target }) => {
     onSidebarSelection(target.textContent);
   }
 

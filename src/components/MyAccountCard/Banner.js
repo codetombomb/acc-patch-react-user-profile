@@ -1,4 +1,4 @@
-function Banner({bannerColor}) {
+const Banner = ({bannerColor}) => {
   return (
     <div className="banner" style={{backgroundColor: bannerColor}}></div>
   )

@@ -1,4 +1,4 @@
-function Avatar({ avatar }) {
+const Avatar = ({ avatar }) => {
   return (
     <>
       <img className="avatar" src={avatar} alt="User Avatar"></img>

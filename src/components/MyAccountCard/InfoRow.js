@@ -1,5 +1,5 @@
 import Button from '../Button'
-function InfoRow({ rowName, rowValue, clickHandler }) {
+const InfoRow = ({ rowName, rowValue, clickHandler }) => {
   return (
     <div className="info-row">
       <div className="row-name-value-wrapper">

@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import Button from "../Button";
 import InfoContainer from "./InfoContainer";
 
-function MyAccount({ user, handleEditClick }) {
+const MyAccount = ({ user, handleEditClick }) => {
 
   const { bannerColor, avatar, displayName, username, email, phoneNumber } = user
 

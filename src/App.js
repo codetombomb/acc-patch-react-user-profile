@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import EscButton from "./components/EscButton";
 import MyAccount from "./components/MyAccountCard/MyAccount";
 import Sidebar from "./components/Sidebar/Sidebar";
 import EditProfile from "./components/EditProfile/EditProfile";
 
-function App() {
+const App = () => {
   const [userOptions] = useState([
     "My Account",
     "Edit Profile",
@@ -28,16 +27,16 @@ function App() {
       .then((data) => setUser({ ...data }));
   }, []);
 
-  function handleSidebarSelection(option) {
+  const handleSidebarSelection = (option) => {
     setSelectedOption(option);
   }
 
-  function handleUpdateUser(updatedUser) {
+  const handleUpdateUser = (updatedUser) => {
     setUser({ ...updatedUser });
     setSelectedOption("My Account")
   }
 
-  function onEditClick(){
+  const onEditClick = () => {
     setSelectedOption("Edit Profile")
   }
 
