@@ -5,10 +5,10 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import EditProfile from "./components/EditProfile/EditProfile";
 
 const App = () => {
-  const [userOptions] = useState([
+  const userOptions = [
     "My Account",
     "Edit Profile",
-  ]);
+  ];
   const [user, setUser] = useState({
     username: "",
     firstName: "",
