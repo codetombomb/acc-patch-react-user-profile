@@ -15,7 +15,8 @@ import { useState } from "react";
                 2. (Pessimistically) Updates state - PATCH and PUT
     */
 
-const EditProfile = ({ user, handleUpdateUser }) => {
+const EditProfile = () => {
+  // What props might we need?
   // Make copy of user for controlled form (User data should be filled in already)
 
   const handleInputChange = () => {

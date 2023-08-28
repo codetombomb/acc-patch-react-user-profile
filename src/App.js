@@ -53,7 +53,7 @@ const App = () => {
           {selectedOption === "My Account" ? (
             <MyAccount user={user} handleEditClick={onEditClick}/>
           ) : (
-            <EditProfile user={user} handleUpdateUser={handleUpdateUser} />
+            <EditProfile  />
           )}
         </div>
         <EscButton />
