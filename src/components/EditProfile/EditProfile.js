@@ -16,109 +16,22 @@ import { useState } from "react";
     */
 
 const EditProfile = ({ user, handleUpdateUser }) => {
-  const [userData, setUserData] = useState({ ...user });
-  //   const [updatedProps, setUpdatedProps] = useState({})
+  // Make copy of user for controlled form (User data should be filled in already)
 
-  const handleInputChange = ({ target }) => {
-    const updatedUser = { ...userData };
-    updatedUser[target.name] = target.value;
-    setUserData(updatedUser);
-    // setUpdatedProps({...updatedProps, [target.name]: target.value})
+  const handleInputChange = () => {
+    // Use the target name and value to update local user state
   }
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
-    const config = {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(userData),
-    };
-    fetch("http://localhost:3001/users/1", config)
-      .then((resp) => resp.json())
-      .then((user) => handleUpdateUser(user));
+    // 1. prevent default
+    // 2. create options object for patch
+    // 3. send patch
+    // 4. update parent state using response object
   }
 
   return (
     <div className="edit-profile">
-      <form className="edit-profile-form" onSubmit={handleFormSubmit}>
-        <label htmlFor="displayName">
-          Display Name
-          <input
-            id="displayName"
-            type="text"
-            name="displayName"
-            value={userData.displayName}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <hr />
-        <label htmlFor="username">
-          Username
-          <input
-            id="username"
-            type="text"
-            name="username"
-            value={userData.username}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <hr />
-        <label htmlFor="email">
-          Email
-          <input
-            id="email"
-            type="email"
-            name="email"
-            value={userData.email}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <hr />
-        <label htmlFor="phoneNumber">
-          Phone Number
-          <input
-            id="phoneNumber"
-            type="tel"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            name="phoneNumber"
-            value={userData.phoneNumber}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <hr />
-        <label htmlFor="avatar">
-          Avatar
-          <input
-            id="avatar"
-            type="text"
-            name="avatar"
-            value={userData.avatar}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <hr />
-        <label htmlFor="bannerColor">
-          Banner Color
-          <input
-            id="bannerColor"
-            className="color-picker"
-            type="color"
-            name="bannerColor"
-            value={userData.bannerColor}
-            onChange={handleInputChange}
-            required
-          />
-        </label>
-        <hr />
-        <input type="submit" />
-      </form>
+      {/* WRITE CODE HERE */}
     </div>
   );
 }
