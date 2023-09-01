@@ -10,10 +10,16 @@ import { useState } from "react";
                 4. Phone Number
                 5. Avatar
                 6. Banner Color (with className - color-picker)
-            c. with onSubmit handler that 
-                1. Prevents default
-                2. (Pessimistically) Updates state - PATCH and PUT
+        2. Create state in the edit profile component that is a copy of the user state passed down from App
+        3. Populate inputs with initial values from user state object
+        4. Create onChange handler that updates controlled form state
+        5. Create onSubmit handler that:
+            a. Prevents default
+STEP 1 -->  b. Sends PATCH or PUT
+STEP 2 -->  c. (Pessimistically) Updates state (After response received)        
+            d. Demo Optimistic rendering
     */
+
 
 const EditProfile = () => {
   // What props might we need?
@@ -32,7 +38,7 @@ const EditProfile = () => {
 
   return (
     <div className="edit-profile">
-      {/* WRITE CODE HERE */}
+      {/* CREATE FORM HERE! */}
     </div>
   );
 }
