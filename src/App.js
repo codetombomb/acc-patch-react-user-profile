@@ -16,7 +16,7 @@ const App = () => {
     displayName: "",
     email: "",
     phoneNumber: "",
-    bannerColor: "",
+    bannerColor: ""
   });
 
   const [selectedOption, setSelectedOption] = useState("My Account");
@@ -53,7 +53,7 @@ const App = () => {
           {selectedOption === "My Account" ? (
             <MyAccount user={user} handleEditClick={onEditClick}/>
           ) : (
-            <EditProfile  />
+            <EditProfile user={user} handleUpdateUser={handleUpdateUser}/>
           )}
         </div>
         <EscButton />
